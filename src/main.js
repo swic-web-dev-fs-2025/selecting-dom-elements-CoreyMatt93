@@ -1,7 +1,7 @@
-import "./style.css";
+const mainHeader = document.getElementById("main-header");
+mainHeader?.addEventListener("click", () => {
+  console.info(mainHeader);
+});
 
-document.querySelector("#app").innerHTML = `
-  <h1 class="text-3xl font-bold underline">
-    Hello Vite!
-  </h1>
-`;
+const links = document.querySelectorAll(".navbar a");
+console.info("Number of links in navbar:", links.length);
