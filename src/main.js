@@ -25,3 +25,19 @@ const cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
   card.setAttribute("data-viewed", "true");
 });
+
+// Select the product with data-product-id="2" and change its price to "$24.99" with null guards
+const product2 = document.querySelector('[data-product-id="2"]');
+if (product2) {
+  const priceElement = product2.querySelector(".price");
+  if (priceElement) {
+    priceElement.textContent = "$24.99";
+  } else {
+    console.warn("Price element not found inside product 2");
+  }
+} else {
+  console.warn("Product with data-product-id=2 not found");
+}
+
+// Brittle Selector
+const title = document.querySelector("main .card .card-title");
