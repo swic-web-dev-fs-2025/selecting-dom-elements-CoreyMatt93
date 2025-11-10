@@ -13,3 +13,9 @@ const internalLinks = document.querySelectorAll('a[href^="/"]');
 internalLinks.forEach((link) => {
   link.textContent += " [internal]";
 });
+
+// Select required inputs and add yellow outline
+const requiredInputs = document.querySelectorAll("input[required]");
+requiredInputs.forEach((input) => {
+  input.style.outline = "2px solid gold";
+});
