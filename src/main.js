@@ -40,4 +40,6 @@ if (product2) {
 }
 
 // Brittle Selector
-const title = document.querySelector("main .card .card-title");
+// const title = document.querySelector("main .card .card-title");
+// Refactored Selector
+const title = document.querySelector('[data-title-id="1"]');
